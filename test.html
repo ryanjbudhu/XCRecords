@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<form>
+			<input id="tableName" placeholder="Table Name">
+			<button type="button">-</button>
+			<button type="button">-</button>
+			<div id="one">
+				<input name="header1" onkeyup="changePlace(this.name,this.value)" placeholder="Header1">
+				<input name="header2" placeholder="Header2">
+				<input name="header3" placeholder="Header3">
+				<button type="button">Add Header</button>
+			</div>
+			<div>
+				<input name="1" placeholder="Entry 1">
+				<input name="1" placeholder="Entry 2">
+				<input name="1" placeholder="Entry 3">
+			</div>
+			<div>
+				<input name="1" placeholder="Entry 1">
+				<input name="1" placeholder="Entry 2">
+				<input name="1" placeholder="Entry 3">
+				<button type="button">-</button>
+				<button type="button">Add entry</button>
+			</div>
+			
+			<input id="date">
+
+			
+		</form>
+		
+		<table border="1px" style="text-align: left;" cellpadding="5">
+			<tr>
+				<th>Name</th>
+				<th>School</th>
+			</tr>
+			<tr>
+				<td>Ryan Budhu</td>
+				<td>NJIT</td>
+			</tr>
+			<tr>
+				<td>Pat Walsh</td>
+				<td>Rutgers</td>
+			</tr>
+		</table>
+		
+	</body>
+	<script>
+		function changePlace(val) {
+			var d = document.getElementById("date");
+			d.placeholder = val;
+		}
+		var divs = document.getElementById("one");
+		console.log(divs.childNodes);
+	</script>
+</html>
